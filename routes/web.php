@@ -7,4 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
  Route::get('/contacts',[ContactController::class,'contacts']);
-
+ Route::post('/contacts', [ContactController::class, 'createContact'])->name('contacts.createContact');
+ 
